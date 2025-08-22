@@ -1,7 +1,7 @@
-package com.closetx.ecommerce.entities;
+package com.closetx.ecommerce.dtos;
 
 import com.closetx.ecommerce.entities.enums.Rol;
-import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,26 +9,21 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-@Data
-@Entity
-@Table(name = "usuarios")
 @Builder
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Usuario {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_usuario;
+public class AltaUsuarioDTO {
     private String nombre_Completo;
     private String email;
     private String contrasenia;
-    @Enumerated(EnumType.STRING)
+    @JsonIgnore
     private Rol rol;
     private String dni;
     private String Pais;
     private String provincia;
     private String direccion;
     private Integer numero;
-    @Temporal(TemporalType.DATE)
+    @JsonIgnore
     private LocalDate fecha_Registro;
 }

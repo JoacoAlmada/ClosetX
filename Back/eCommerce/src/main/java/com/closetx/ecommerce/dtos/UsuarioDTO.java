@@ -1,34 +1,34 @@
-package com.closetx.ecommerce.entities;
+package com.closetx.ecommerce.dtos;
 
 import com.closetx.ecommerce.entities.enums.Rol;
-import jakarta.persistence.*;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.Date;
 
-@Data
-@Entity
-@Table(name = "usuarios")
 @Builder
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Usuario {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class UsuarioDTO {
     private Integer id_usuario;
     private String nombre_Completo;
     private String email;
     private String contrasenia;
-    @Enumerated(EnumType.STRING)
     private Rol rol;
     private String dni;
     private String Pais;
     private String provincia;
     private String direccion;
     private Integer numero;
-    @Temporal(TemporalType.DATE)
     private LocalDate fecha_Registro;
+
+    //Agregar validaciones
 }

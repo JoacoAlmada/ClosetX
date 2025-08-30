@@ -9,11 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Detalle_FacturaDTO {
-    private Integer id_detalle_Factura;
-    private FacturaDTO factura;
-    private ProductoDTO producto;
+public class ProductoCompraDTO {
+    private Integer id_producto;
     private Integer cantidad;
-    private Double precio_Unitario;
-    private Double subTotal;
 }

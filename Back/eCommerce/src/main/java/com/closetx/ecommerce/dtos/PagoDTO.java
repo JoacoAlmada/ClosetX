@@ -16,7 +16,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class PagoDTO {
     private Integer id_pago;
-    private Factura factura;
+    private FacturaDTO factura;
     private Metodo metodo;
     private Estado estado;
     private Date fecha;

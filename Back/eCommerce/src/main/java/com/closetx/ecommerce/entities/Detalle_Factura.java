@@ -24,5 +24,6 @@ public class Detalle_Factura {
     private Producto producto;
     private Integer cantidad;
     private Double precio_Unitario;
+    @Column(name = "SUBTOTAL")
     private Double subTotal;
 }
